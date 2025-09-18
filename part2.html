@@ -90,8 +90,10 @@
                         <fieldset class="feedback">
                             <legend>Feedback</legend>
                             <label class="nivel">Nivel de satisfação de 00 a 100</label>
-                            <input type="range" name="comen" class="comen">
-                            <h2 class="nota">50</h2>
+                            <input type="range" name="comen" class="comen" min="0" max="100" value="75" oninput="resultado.value=parseInt(comen.value)">
+                            <div class="range-output">
+                                <output name="resultado" class="resultado">75</output>
+                            </div>
                             <p class="deixa">Deixa seu comentario:</p>
                             <textarea name="comentario" class="comentario"></textarea>
                         </fieldset>
